@@ -183,7 +183,9 @@ Seeker views updated Status
 Public registration creates only `seeker` or `employer` users.
 
 For local admin testing, a trusted user's role can be changed to `admin` directly in MongoDB or through a controlled seed script.
+**Job Portal Backend API**
 
+Built using Node.js, Express.js, and MongoDB.
 ## Project
 
 **Job Portal Backend API**
