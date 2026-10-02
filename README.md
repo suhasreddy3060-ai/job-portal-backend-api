@@ -1,8 +1,8 @@
 # Job Portal Backend API
 
-A RESTful backend API for a Job Portal system supporting **Job Seekers, Employers, and Administrators**.
+A RESTful backend API for a Job Portal system supporting Job Seekers, Employers, and Administrators.
 
-## 🚀 Tech Stack
+## Tech Stack
 
 - Node.js
 - Express.js
@@ -13,9 +13,10 @@ A RESTful backend API for a Job Portal system supporting **Job Seekers, Employer
 - express-validator
 - Postman
 
-## 👥 User Roles
+## User Roles
 
 ### Job Seeker
+
 - Register and login
 - Manage profile
 - Browse available jobs
@@ -24,20 +25,23 @@ A RESTful backend API for a Job Portal system supporting **Job Seekers, Employer
 - Track application status
 
 ### Employer
+
 - Register and login
 - Create and manage jobs
 - View applications for their jobs
 - Update application status
 
 ### Admin
+
 - Manage users
-- Activate/deactivate users
+- Activate or deactivate users
 - Manage jobs
 
-## ⚙️ Setup
+## Setup
 
 ### 1. Clone the repository
 
 ```bash
 git clone https://github.com/suhasreddy3060-ai/job-portal-backend-api.git
 cd job-portal-backend-api
+```
