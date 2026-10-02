@@ -1,0 +1,17 @@
+{
+  "info": { "name": "Job Portal Backend API", "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json" },
+  "variable": [{"key":"baseUrl","value":"http://localhost:5000/api"},{"key":"jobId","value":"REPLACE_JOB_ID"},{"key":"applicationId","value":"REPLACE_APPLICATION_ID"}],
+  "item": [
+    {"name":"Health","request":{"method":"GET","url":"{{baseUrl}}/../api/health"}},
+    {"name":"Register Seeker","request":{"method":"POST","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\n  \"name\": \"Test Seeker\",\n  \"email\": \"seeker@example.com\",\n  \"password\": \"password123\",\n  \"role\": \"seeker\",\n  \"skills\": [\"Java\", \"MongoDB\"],\n  \"experience\": 1,\n  \"education\": [{\"degree\":\"B.Tech\",\"institution\":\"VNRVJIET\",\"year\":2028}]\n}"},"url":"{{baseUrl}}/auth/register"}},
+    {"name":"Register Employer","request":{"method":"POST","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\n  \"name\": \"Test Employer\",\n  \"email\": \"employer@example.com\",\n  \"password\": \"password123\",\n  \"role\": \"employer\"\n}"},"url":"{{baseUrl}}/auth/register"}},
+    {"name":"Login","request":{"method":"POST","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"email\":\"employer@example.com\",\"password\":\"password123\"}"},"url":"{{baseUrl}}/auth/login"}},
+    {"name":"Create Job","request":{"method":"POST","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\n  \"title\": \"Backend Developer\",\n  \"companyName\": \"Tech Corp\",\n  \"description\": \"Build REST APIs with Node.js.\",\n  \"location\": \"Hyderabad\",\n  \"employmentType\": \"full-time\",\n  \"salaryRange\": {\"min\": 500000, \"max\": 900000},\n  \"requiredSkills\": [\"Node.js\", \"MongoDB\"],\n  \"experienceRequirement\": 0,\n  \"applicationDeadline\": \"2027-12-31T23:59:59.000Z\"\n}"},"url":"{{baseUrl}}/jobs"}},
+    {"name":"List Jobs","request":{"method":"GET","url":"{{baseUrl}}/jobs"}},
+    {"name":"Get My Jobs","request":{"method":"GET","url":"{{baseUrl}}/jobs/mine"}},
+    {"name":"Login as Seeker","request":{"method":"POST","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"email\":\"seeker@example.com\",\"password\":\"password123\"}"},"url":"{{baseUrl}}/auth/login"}},
+    {"name":"Apply for Job","request":{"method":"POST","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"coverLetter\":\"I am interested in this role.\"}"},"url":"{{baseUrl}}/applications/jobs/{{jobId}}"}},
+    {"name":"My Applications","request":{"method":"GET","url":"{{baseUrl}}/applications/mine"}},
+    {"name":"Logout","request":{"method":"POST","url":"{{baseUrl}}/auth/logout"}}
+  ]
+}

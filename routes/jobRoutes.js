@@ -1,0 +1,10 @@
+const router = require('express').Router();
+const { protect, authorize } = require('../middleware/auth');
+const c = require('../controllers/jobController');
+router.get('/', c.listJobs);
+router.get('/mine', protect, authorize('employer'), c.myJobs);
+router.get('/:id', c.getJob);
+router.post('/', protect, authorize('employer'), c.createJob);
+router.patch('/:id', protect, authorize('employer'), c.updateJob);
+router.delete('/:id', protect, authorize('employer'), c.deleteJob);
+module.exports = router;
