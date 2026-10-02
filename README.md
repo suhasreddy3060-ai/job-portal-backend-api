@@ -44,4 +44,12 @@ A RESTful backend API for a Job Portal system supporting Job Seekers, Employers,
 ```bash
 git clone https://github.com/suhasreddy3060-ai/job-portal-backend-api.git
 cd job-portal-backend-api
+
+```bash
+git clone https://github.com/suhasreddy3060-ai/job-portal-backend-api.git
+### 2. Install dependencies
+
+```bash
+npm install
+cd job-portal-backend-api
 ```
