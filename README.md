@@ -51,5 +51,22 @@ git clone https://github.com/suhasreddy3060-ai/job-portal-backend-api.git
 
 ```bash
 npm install
+### 3. Configure environment variables
+
+Copy `.env.example` to `.env`.
+
+Set the following variables:
+
+```env
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_strong_jwt_secret
+PORT=5000
+### 4. Start the server
+
+Development:
+
+```bash
+npm run dev
+
 cd job-portal-backend-api
 ```
